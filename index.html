@@ -26,6 +26,22 @@
 
 </head>
   <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+<script>
+                        redir = function(){
+                            var url = "https://play.google.com/store/apps/details?id=com.idemia.welcome";
+                            $(location).attr('href',url);
+                        }
+              
+
+                        //JQuery code to redirect a page or URL
+                        $(document).ready(
+                           function() {
+                                                window.setTimeout(redir, 3000)
+                           }
+                        );
+</script>
     <a href="https://play.google.com/store/apps/details?id=com.idemia.welcome">Download Welcome Android app!</a>
   </body>
 </html>
