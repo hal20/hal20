@@ -22,26 +22,68 @@
 
 <meta property="og:description" content="hal men!">
 <meta name="description" content="hal men">
-
+	<style>
+		body {
+			background-color:#7ad5ea;
+			font-family: "Trebuchet MS", "Ubuntu";
+			color:white;
+			
+		}
+		a {
+			text-decoration:none;
+			font-weight:700;
+			font-size:2em;
+		}
+		a.button {
+			padding:30px;
+			color: #e66249;
+			background:white;
+			border: solid 2px #c8380c;
+			display:inline-block;
+		}
+		.shadow {
+		  -moz-box-shadow:    0px 3px 5px 6px rgba(0,0,0,0.4);
+		  -webkit-box-shadow: 0px 3px 5px 6px rgba(0,0,0,0.4);
+		  box-shadow:         0px 3px 5px 6px rgba(0,0,0,0.4);
+		}
+		#pop {
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:100px;
+			width:400px;
+			height:400px;
+			background-color:#e66249;
+			text-align:center;
+			padding:50px;
+		}
+		div#pop > * {
+			margin:10px;
+		}
+	</style>
 
 </head>
   <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
 <script>
-                        redir = function(){
-                            var url = "https://play.google.com/store/apps/details?id=com.idemia.welcome";
-                            $(location).attr('href',url);
-                        }
-              
+redir = function(){
+	var url = "https://play.google.com/store/apps/details?id=com.idemia.welcome";
+	window.location.replace(url);
+}
 
-                        //JQuery code to redirect a page or URL
-                        $(document).ready(
-                           function() {
-                                                window.setTimeout(redir, 3000)
-                           }
-                        );
+document.onreadystatechange = function () {
+	if (document.readyState == "interactive") {
+		window.setTimeout(redir, 3*1000)
+	}
+}
 </script>
-    <a href="https://play.google.com/store/apps/details?id=com.idemia.welcome">Download Welcome Android app!</a>
+	
+	<div id="pop">
+		<a class="button shadow" title="draw candy from your phone!" href="https://play.google.com/store/apps/details?id=com.idemia.welcome">
+			Download Welcome Android app!
+		</a>
+	</div>
+	
+    
   </body>
 </html>
